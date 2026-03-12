@@ -23,14 +23,20 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* ── Grid de números — sempre 3 colunas ── */
+/* ── Grid de números — empilhado no mobile, 3 colunas a partir de 860px ── */
 .CaseNumbers__Grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-8) var(--space-6);
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 860px) {
+  .CaseNumbers__Grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .CaseNumbers__Item {
