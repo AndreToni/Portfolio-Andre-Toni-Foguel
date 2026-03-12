@@ -1,0 +1,12 @@
+/* ─── CaseSectionImage — imagem full-bleed 100vw × altura natural ─── */
+
+.CaseSectionImage {
+  width: 100%;
+  background: var(--color-surface);
+}
+
+.CaseSectionImage__Img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}

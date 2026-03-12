@@ -1,0 +1,71 @@
+/* Mobile first — 320px base */
+
+.SectionReveal {
+  width: 100%;
+}
+
+/* All direct children start hidden */
+.SectionReveal > * {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity var(--motion-duration) var(--motion-easing),
+    transform var(--motion-duration) var(--motion-easing);
+}
+
+/* Cascade reveal on each child — 80ms stagger */
+.SectionReveal[data-revealed='true'] > *:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 80ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 160ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 240ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(5) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 320ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(6) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 400ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(7) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 480ms;
+}
+
+.SectionReveal[data-revealed='true'] > *:nth-child(8) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 560ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .SectionReveal > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

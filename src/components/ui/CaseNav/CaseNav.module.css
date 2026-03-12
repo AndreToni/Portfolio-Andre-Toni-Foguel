@@ -1,0 +1,122 @@
+/* ─── CaseNav — menu lateral sticky, desktop only ─── */
+
+/* Oculto em mobile e tablet */
+.CaseNav {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .CaseNav {
+    display: block;
+    position: fixed;
+    left: var(--space-8);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: var(--z-overlay);
+  }
+
+  .CaseNav__List {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .CaseNav__Item {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* Link: barra à esq., label expande para a direita */
+  .CaseNav__Link {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-2);
+    text-decoration: none;
+    padding: var(--space-1) 0;
+    opacity: 0.45;
+    transition: opacity var(--transition-base);
+  }
+
+  .CaseNav__Link:hover,
+  .CaseNav__Link--active {
+    opacity: 1;
+  }
+
+  /* Barra vertical — mais alta que larga, largura fixa, altura = copy */
+  .CaseNav__Dot {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 2px;
+    height: 1em;             /* mesma altura do texto */
+    border-radius: 1px;
+    background: currentColor;
+    transition:
+      transform var(--transition-base),
+      height var(--transition-base);
+  }
+
+  .CaseNav__Link:hover .CaseNav__Dot,
+  .CaseNav__Link--active .CaseNav__Dot {
+    height: 1.6em;           /* cresce no hover/active */
+  }
+
+  /* Label — oculta por padrão, expande no hover/active */
+  .CaseNav__Label {
+    font-family: var(--font-body);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    padding: 0;
+    transition:
+      max-width var(--transition-base),
+      padding var(--transition-base);
+  }
+
+  /* Label só aparece no hover */
+  .CaseNav__Link:hover .CaseNav__Label {
+    max-width: 200px;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  /* ────────────────────────────────────────────
+     Tema DARK (seção com fundo escuro)
+     → barra e cápsula brancos; texto escuro
+  ──────────────────────────────────────────── */
+  .CaseNav--dark {
+    color: var(--color-neutral-white);
+  }
+
+  .CaseNav--dark .CaseNav__Link:hover .CaseNav__Label {
+    background: var(--color-neutral-white);
+    color: var(--color-text-on-light);
+  }
+
+  /* ────────────────────────────────────────────
+     Tema LIGHT (seção com fundo claro)
+     → barra e cápsula escuros; texto branco
+  ──────────────────────────────────────────── */
+  .CaseNav--light {
+    color: var(--color-neutral-900);
+  }
+
+  .CaseNav--light .CaseNav__Link:hover .CaseNav__Label {
+    background: var(--color-neutral-900);
+    color: var(--color-neutral-white);
+  }
+}
+
+@media (min-width: 1720px) {
+  .CaseNav {
+    left: var(--space-12);
+  }
+}

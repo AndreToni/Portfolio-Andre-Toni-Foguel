@@ -1,0 +1,109 @@
+/* ─── HeroScroll — scroll indicator desktop only ─── */
+
+/* Oculto até 1200px */
+.HeroScroll {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .HeroScroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+
+    /* Posição no canto inferior direito da hero */
+    position: absolute;
+    bottom: var(--space-10);
+    right: var(--space-12);
+    z-index: var(--z-raised);
+
+    pointer-events: none;
+    user-select: none;
+
+    /* Entry — aparece depois dos botões */
+    opacity: 0;
+    animation: HeroScrollReveal 600ms var(--motion-easing) 1100ms forwards;
+
+    /* Fade out ao scrollar */
+    transition: opacity 300ms ease;
+  }
+
+  .HeroScroll--hidden {
+    opacity: 0 !important;
+    animation: none;
+  }
+
+  /* ── Mark TF ── */
+  .HeroScroll__Mark {
+    width: 28px;
+    height: auto;
+    /* paths preenchidos com branco muito suave para contrastar no fundo vermelho */
+    fill: rgba(255, 255, 255, 0.13);
+  }
+
+  /* ── Label ── */
+  .HeroScroll__Label {
+    font-family: var(--font-big-shoulders), sans-serif;
+    font-size: 0.625rem;       /* 10px */
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    line-height: 1;
+  }
+
+  /* ── Arrow ── */
+  .HeroScroll__Arrow {
+    width: 12px;
+    height: auto;
+    color: rgba(255, 255, 255, 0.45);
+    animation: HeroScrollBounce 1.4s ease-in-out infinite;
+  }
+
+  /* ── Dot ── */
+  .HeroScroll__Dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Wide */
+@media (min-width: 1720px) {
+  .HeroScroll {
+    bottom: var(--space-12);
+    right: var(--space-16);
+  }
+}
+
+/* ── Keyframes ── */
+@keyframes HeroScrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes HeroScrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .HeroScroll__Arrow,
+  .HeroScroll__Dot {
+    animation: none;
+  }
+}

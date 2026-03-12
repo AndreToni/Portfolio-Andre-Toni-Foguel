@@ -1,0 +1,16 @@
+/* Mobile first — 320px base */
+
+.ParticleCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-base);
+}
+
+.ParticleCanvas canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

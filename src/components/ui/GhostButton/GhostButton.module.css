@@ -1,0 +1,114 @@
+/* Mobile first — 320px base */
+
+.GhostButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  padding: var(--space-3) var(--space-6);
+  min-height: 54px;
+  cursor: pointer;
+  line-height: 1;
+  white-space: nowrap;
+  background-size: 200% 100%;
+  background-position: right center;
+  transition:
+    background-position 200ms ease,
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.GhostButton:hover {
+  transform: translateY(-2px);
+  background-position: left center;
+}
+
+.GhostButton:active {
+  transform: translateY(0);
+}
+
+/* On red background → fill branco no hover, texto → escuro */
+.GhostButton--on-red {
+  border: 1.5px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background-image: linear-gradient(to right, var(--color-neutral-white) 50%, transparent 50%);
+}
+
+.GhostButton--on-red:hover {
+  border-color: var(--color-neutral-white);
+  color: var(--color-text-on-light);
+}
+
+/* On dark background → fill branco no hover, texto → escuro */
+.GhostButton--on-dark {
+  border: 1.5px solid var(--color-secondary-700);
+  color: var(--color-text-on-dark);
+  background-image: linear-gradient(to right, var(--color-neutral-white) 50%, transparent 50%);
+}
+
+.GhostButton--on-dark:hover {
+  border-color: var(--color-neutral-white);
+  color: var(--color-text-on-light);
+}
+
+/* On light background → dark border and text */
+.GhostButton--on-light {
+  border: 1.5px solid var(--color-neutral-600);
+  color: var(--color-text-on-light);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 50%, transparent 50%);
+}
+
+.GhostButton--on-light:hover {
+  border-color: var(--color-neutral-900);
+}
+
+.GhostButton--full {
+  width: 100%;
+  justify-content: center;
+}
+
+.GhostButton__Icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+/* Tablet */
+@media (min-width: 860px) {
+  .GhostButton {
+    font-size: var(--font-size-base);
+    padding: var(--space-4) var(--space-8);
+  }
+}
+
+/* Wide */
+@media (min-width: 1720px) {
+  .GhostButton {
+    font-size: var(--font-size-md);
+    padding: var(--space-4) var(--space-12);
+  }
+}
+
+/* Auto fill below 320px */
+@media (max-width: 319px) {
+  .GhostButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .GhostButton:hover {
+    transform: none;
+  }
+}

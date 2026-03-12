@@ -1,0 +1,99 @@
+/* ─── Breadcrumb ─── */
+
+.Breadcrumb {
+  display: flex;
+  min-width: 0;   /* permite truncar dentro do flex pai */
+  width: 100%;
+}
+
+.Breadcrumb__List {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;        /* força 1 linha */
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;             /* permite shrink dentro do flex pai */
+}
+
+.Breadcrumb__Item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;           /* itens fixos (Home, Trabalhos) não encolhem */
+}
+
+/* O item atual pode encolher e mostrar ellipsis */
+.Breadcrumb__Item:last-child {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.Breadcrumb__Link,
+.Breadcrumb__Current,
+.Breadcrumb__Sep {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Só o item atual trunca com ellipsis */
+.Breadcrumb__Current {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Breadcrumb__Sep {
+  opacity: 0.4;
+}
+
+/* ── on-red ── */
+.Breadcrumb--on-red .Breadcrumb__Link {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color var(--transition-fast);
+}
+.Breadcrumb--on-red .Breadcrumb__Link:hover {
+  color: var(--color-neutral-white);
+}
+.Breadcrumb--on-red .Breadcrumb__Current {
+  color: var(--color-neutral-white);
+}
+.Breadcrumb--on-red .Breadcrumb__Sep {
+  color: var(--color-neutral-white);
+}
+
+/* ── on-dark ── */
+.Breadcrumb--on-dark .Breadcrumb__Link {
+  color: var(--color-muted-on-dark);
+  transition: color var(--transition-fast);
+}
+.Breadcrumb--on-dark .Breadcrumb__Link:hover {
+  color: var(--color-text-on-dark);
+}
+.Breadcrumb--on-dark .Breadcrumb__Current {
+  color: var(--color-text-on-dark);
+}
+.Breadcrumb--on-dark .Breadcrumb__Sep {
+  color: var(--color-muted-on-dark);
+}
+
+/* ── on-light ── */
+.Breadcrumb--on-light .Breadcrumb__Link {
+  color: var(--color-muted-on-light);
+  transition: color var(--transition-fast);
+}
+.Breadcrumb--on-light .Breadcrumb__Link:hover {
+  color: var(--color-text-on-light);
+}
+.Breadcrumb--on-light .Breadcrumb__Current {
+  color: var(--color-text-on-light);
+}
+.Breadcrumb--on-light .Breadcrumb__Sep {
+  color: var(--color-muted-on-light);
+}

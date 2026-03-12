@@ -1,0 +1,81 @@
+/* ─── CaseExplore — continuar explorando · fundo light ─── */
+
+.CaseExplore {
+  background: var(--color-section-light);
+  padding: var(--space-16) var(--space-6);
+}
+
+.CaseExplore__Inner {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* ── Header ── */
+.CaseExplore__Header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.CaseExplore__Label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.CaseExplore__Title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-3xl));
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-on-light);
+  margin: 0;
+}
+
+/* ── Grid de cards — 1 col abaixo de 860px ── */
+.CaseExplore__Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── Tablet ── */
+@media (min-width: 860px) {
+  .CaseExplore {
+    padding: var(--space-24) var(--space-8);
+  }
+
+  .CaseExplore__Grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8) var(--space-6);
+  }
+}
+
+/* ── Desktop ── */
+@media (min-width: 1200px) {
+  .CaseExplore {
+    padding: var(--space-24) var(--space-12);
+  }
+
+  .CaseExplore__Grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-12) var(--space-8);
+  }
+}
+
+/* ── Wide ── */
+@media (min-width: 1720px) {
+  .CaseExplore {
+    padding: var(--space-32) var(--space-16);
+  }
+}

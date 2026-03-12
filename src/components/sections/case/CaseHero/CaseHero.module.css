@@ -1,0 +1,187 @@
+/* ─── CaseHero — primeira dobra · fundo primary ─── */
+
+.CaseHero {
+  background: var(--color-section-red);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-24) 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.CaseHero__Inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-6) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* ── Content ── */
+.CaseHero__Content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: 960px;
+}
+
+.CaseHero__Category {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.CaseHero__Title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 7vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  color: var(--color-text-on-red);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.CaseHero__Subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* ── Meta grid ── */
+.CaseHero__Meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-8);
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.CaseHero__MetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.CaseHero__MetaLabel {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.CaseHero__MetaValue {
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-on-red);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── KPI Goal Card ── */
+.CaseHero__KpiCard {
+  padding: var(--space-3);
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-text-on-red);
+}
+
+.CaseHero__KpiLabel {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-2);
+}
+
+.CaseHero__KpiText {
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-on-red);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── Tags ── */
+.CaseHero__Tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.CaseHero__Tag {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* ── Cover image — full-width, altura natural da imagem ── */
+.CaseHero__Cover {
+  width: 100%;
+  flex-shrink: 0;
+  line-height: 0; /* remove inline-block gap */
+}
+
+.CaseHero__CoverImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Tablet ── */
+@media (min-width: 860px) {
+  .CaseHero {
+    padding: var(--space-32) 0 0;
+  }
+
+  .CaseHero__Inner {
+    padding: 0 var(--space-8) var(--space-16);
+  }
+
+  .CaseHero__Meta {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+/* ── Desktop ── */
+@media (min-width: 1200px) {
+  .CaseHero__Inner {
+    padding: 0 var(--space-12) var(--space-16);
+  }
+}
+
+/* ── Wide ── */
+@media (min-width: 1720px) {
+  .CaseHero__Inner {
+    padding: 0 var(--space-16) var(--space-24);
+  }
+}

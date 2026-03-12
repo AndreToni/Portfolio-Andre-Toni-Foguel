@@ -1,0 +1,173 @@
+/* Mobile first — 320px base */
+
+.Navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Desktop list — hidden on mobile */
+.Navigation__List {
+  display: none;
+  align-items: center;
+  gap: var(--space-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Navigation__Link {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* Clip to one line — slider reveals second copy on hover */
+  display: block;
+  height: 1em;
+  line-height: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Flex-column container with 2 text copies */
+.Navigation__LinkSlider {
+  display: flex;
+  font-weight: var(--font-weight-bold);
+  flex-direction: column;
+  transition: transform 320ms var(--motion-easing, cubic-bezier(0.4, 0, 0.2, 1));
+  will-change: transform;
+}
+
+.Navigation__LinkText {
+  display: block;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Second copy gets 50% opacity — contrast between idle and hover */
+.Navigation__LinkText:last-child {
+  opacity: 0.55;
+}
+
+.Navigation__Link:hover .Navigation__LinkSlider {
+  transform: translateY(-50%);
+}
+
+.Navigation__Link--red {
+  color: var(--color-secondary);
+}
+
+.Navigation__Link--dark {
+  color: var(--color-text-on-dark);
+}
+
+.Navigation__Link--light {
+  color: var(--color-text-on-light);
+}
+
+/* Desktop CTA — hidden on mobile */
+.Navigation__DesktopCTA {
+  display: none;
+}
+
+/* Mobile toggle */
+.Navigation__MobileToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.Navigation__MobileToggle--red {
+  color: var(--color-secondary);
+}
+
+.Navigation__MobileToggle--dark {
+  color: var(--color-text-on-dark);
+}
+
+.Navigation__MobileToggle--light {
+  color: var(--color-text-on-light);
+}
+
+/* Sheet (mobile drawer) overrides */
+.Navigation__Sheet {
+  background: var(--color-section-dark) !important;
+  border: none !important;
+  padding: var(--space-8) var(--space-6) !important;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.Navigation__SheetClose {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted-on-dark);
+  padding: var(--space-2);
+  transition: color var(--transition-fast);
+}
+
+.Navigation__SheetClose:hover {
+  color: var(--color-text-on-dark);
+}
+
+.Navigation__SheetList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.Navigation__SheetLink {
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  line-height: var(--line-height-tight);
+  transition: color var(--transition-base);
+}
+
+.Navigation__SheetLink:hover {
+  color: var(--color-primary);
+}
+
+.Navigation__SheetCTA {
+  margin-top: auto;
+}
+
+/* Tablet — show desktop nav */
+@media (min-width: 860px) {
+  .Navigation__List {
+    display: flex;
+  }
+
+  .Navigation__DesktopCTA {
+    display: block;
+  }
+
+  .Navigation__MobileToggle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Navigation__LinkSlider {
+    transition: none;
+  }
+}

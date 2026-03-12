@@ -1,0 +1,33 @@
+/* Círculo cursor customizado — compartilhado entre WorkCard e AreaCard */
+
+.CardCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition:
+    opacity 180ms ease,
+    transform 60ms linear;
+}
+
+/* Dispositivos touch: ocultar — cursor nativo faz mais sentido */
+@media (hover: none) {
+  .CardCursor {
+    display: none;
+  }
+}

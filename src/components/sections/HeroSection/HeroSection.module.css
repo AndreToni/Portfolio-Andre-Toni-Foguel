@@ -1,0 +1,185 @@
+/* Mobile first — 320px base */
+
+.HeroSection {
+  position: relative;
+  min-height: auto;
+  background: var(--color-section-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: var(--space-24) var(--space-6) var(--space-16);
+}
+
+.HeroSection__Content {
+  position: relative;
+  z-index: var(--z-raised);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.HeroSection__Label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  opacity: 0;
+  animation: HeroRevealUp 500ms var(--motion-easing) 300ms forwards;
+}
+
+.HeroSection__Title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 10vw, 9rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-on-red);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+  opacity: 0;
+  animation: HeroRevealUp 600ms var(--motion-easing) 500ms forwards;
+}
+
+.HeroSection__TitleAccent {
+  color: var(--color-secondary);
+}
+
+.HeroSection__Subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-secondary-300);
+  max-width: 520px;
+  margin: 0;
+  opacity: 0;
+  animation: HeroRevealUp 500ms var(--motion-easing) 700ms forwards;
+}
+
+.HeroSection__Actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: HeroRevealUp 500ms var(--motion-easing) 880ms forwards;
+}
+
+/* Decorative section number — bottom right */
+.HeroSection__SectionNumber {
+  position: absolute;
+  bottom: var(--space-8);
+  right: var(--space-6);
+  z-index: var(--z-raised);
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: var(--font-weight-bold);
+  color: rgba(251, 4, 0, 0.35);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes HeroRevealUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-8));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile — todos os elementos full width abaixo de 860px */
+@media (max-width: 859px) {
+  .HeroSection__Subtitle {
+    max-width: 100%;
+  }
+
+  .HeroSection__Actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Tablet */
+@media (min-width: 860px) {
+  .HeroSection {
+    min-height: 80svh;
+    justify-content: flex-end;
+    padding: var(--space-24) var(--space-8) var(--space-16);
+  }
+
+  .HeroSection__Subtitle {
+    font-size: var(--font-size-lg);
+    max-width: 580px;
+  }
+
+  .HeroSection__SectionNumber {
+    right: var(--space-8);
+  }
+}
+
+/* Tablet landscape 861–1024px
+   justify-content: flex-end + max-height clipa o topo → usar flex-start
+   e reduzir padding/fonte para a hero caber em ~80vh sem overflow */
+@media (min-width: 860px) and (max-width: 1024px) {
+  .HeroSection {
+    min-height: auto;
+    justify-content: flex-start;
+    /* header fixo ~103px + respiro → var(--space-32) = 128px */
+    padding: var(--space-32) var(--space-8) var(--space-12);
+  }
+
+  .HeroSection__Title {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .HeroSection {
+    padding: var(--space-32) var(--space-12) var(--space-24);
+  }
+
+  .HeroSection__Subtitle {
+    font-size: var(--font-size-xl);
+    max-width: 720px;
+  }
+
+  .HeroSection__SectionNumber {
+    right: var(--space-12);
+  }
+}
+
+/* Wide */
+@media (min-width: 1720px) {
+  .HeroSection {
+    padding: var(--space-32) var(--space-16) var(--space-32);
+  }
+
+  .HeroSection__SectionNumber {
+    right: var(--space-16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .HeroSection__Label,
+  .HeroSection__Title,
+  .HeroSection__Subtitle,
+  .HeroSection__Actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

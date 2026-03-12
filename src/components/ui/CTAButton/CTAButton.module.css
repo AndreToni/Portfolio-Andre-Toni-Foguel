@@ -1,0 +1,94 @@
+/* Mobile first — 320px base */
+
+.CTAButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  padding: var(--space-3) var(--space-6);
+  min-height: 54px;
+  cursor: pointer;
+  line-height: 1;
+  white-space: nowrap;
+  background-size: 200% 100%;
+  background-position: right center;
+  transition:
+    background-position 200ms ease,
+    color var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.CTAButton:hover {
+  transform: translateY(-2px);
+  background-position: left center;
+}
+
+.CTAButton:active {
+  transform: translateY(0);
+}
+
+/* On red background → dark button, branco no hover */
+.CTAButton--on-red {
+  background-image: linear-gradient(to right, var(--color-neutral-white) 50%, var(--color-neutral-900) 50%);
+  color: var(--color-text-on-red);
+}
+
+.CTAButton--on-red:hover {
+  color: var(--color-text-on-light);
+}
+
+/* On dark background → fill branco no hover, texto → escuro */
+.CTAButton--on-dark {
+  background-image: linear-gradient(to right, var(--color-neutral-white) 50%, var(--color-primary) 50%);
+  color: var(--color-text-on-red);
+}
+
+.CTAButton--on-dark:hover {
+  color: var(--color-text-on-light);
+}
+
+/* On light background → brand red button */
+.CTAButton--on-light {
+  background-image: linear-gradient(to right, var(--color-primary-700) 50%, var(--color-primary) 50%);
+  color: var(--color-text-on-red);
+}
+
+.CTAButton--full {
+  width: 100%;
+}
+
+/* Tablet */
+@media (min-width: 860px) {
+  .CTAButton {
+    font-size: var(--font-size-base);
+    padding: var(--space-4) var(--space-8);
+  }
+}
+
+/* Wide */
+@media (min-width: 1720px) {
+  .CTAButton {
+    font-size: var(--font-size-md);
+    padding: var(--space-4) var(--space-12);
+  }
+}
+
+/* Auto fill below 320px */
+@media (max-width: 319px) {
+  .CTAButton {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .CTAButton:hover {
+    transform: none;
+  }
+}

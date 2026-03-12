@@ -1,0 +1,70 @@
+/* Mobile first — 320px base */
+
+.ProcessSection {
+  background: var(--color-section-light);
+  padding: var(--space-16) var(--space-6);
+}
+
+.ProcessSection__Inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.ProcessSection__Header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ProcessSection__Label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted-on-light);
+}
+
+.ProcessSection__Title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-on-light);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.ProcessSection__Steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProcessSection__StepWrap {
+  width: 100%;
+}
+
+/* Tablet */
+@media (min-width: 860px) {
+  .ProcessSection {
+    padding: var(--space-24) var(--space-8);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .ProcessSection {
+    padding: var(--space-32) var(--space-12);
+  }
+}
+
+/* Wide */
+@media (min-width: 1720px) {
+  .ProcessSection {
+    padding: var(--space-32) var(--space-16);
+  }
+}

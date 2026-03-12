@@ -1,0 +1,149 @@
+/* ─── CaseTextSection — seção genérica de texto ─── */
+
+.CaseTextSection {
+  min-height: auto; /* hug em mobile */
+  display: flex;
+  align-items: center;
+  padding: var(--space-16) var(--space-6);
+}
+
+/* ── Temas ── */
+.CaseTextSection--dark {
+  background: var(--color-section-dark);
+}
+
+.CaseTextSection--light {
+  background: var(--color-section-light);
+}
+
+/* ── Inner wrapper ── */
+.CaseTextSection__Inner {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+/* ── Grid — título sempre à esquerda ── */
+.CaseTextSection__Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+/* ── Título ── */
+.CaseTextSection__Title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--font-size-2xl), 5vw, var(--font-size-3xl));
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.CaseTextSection--dark .CaseTextSection__Title {
+  color: var(--color-text-on-dark);
+}
+
+.CaseTextSection--light .CaseTextSection__Title {
+  color: var(--color-text-on-light);
+}
+
+/* ── Corpo ── */
+.CaseTextSection__Body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.CaseTextSection__Paragraph {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.CaseTextSection--dark .CaseTextSection__Paragraph {
+  color: var(--color-muted-on-dark);
+}
+
+.CaseTextSection--light .CaseTextSection__Paragraph {
+  color: var(--color-muted-on-light);
+}
+
+/* ── Lista de itens ── */
+.CaseTextSection__Items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.CaseTextSection__Item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.CaseTextSection--dark .CaseTextSection__Item {
+  color: var(--color-secondary-300);
+}
+
+.CaseTextSection--light .CaseTextSection__Item {
+  color: var(--color-text-on-light);
+}
+
+.CaseTextSection__ItemDot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  margin-top: 0.35em;
+}
+
+/* ── Tablet ── */
+@media (min-width: 860px) {
+  .CaseTextSection {
+    min-height: 90vh;
+    padding: var(--space-24) var(--space-8);
+  }
+}
+
+/* ── Desktop: layout em 2 colunas, título sempre à esquerda ── */
+@media (min-width: 1200px) {
+  .CaseTextSection {
+    padding: var(--space-24) var(--space-12);
+  }
+
+  .CaseTextSection__Grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+
+  .CaseTextSection__TitleCol {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .CaseTextSection__BodyCol {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* ── Wide ── */
+@media (min-width: 1720px) {
+  .CaseTextSection {
+    padding: var(--space-32) var(--space-16);
+  }
+}
