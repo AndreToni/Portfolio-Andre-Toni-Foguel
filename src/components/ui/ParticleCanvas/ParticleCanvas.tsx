@@ -46,7 +46,6 @@ export const ParticleCanvas: FC<ParticleCanvasProps> = ({
             animation: {
               enable: true,
               speed: 0.4,
-              minimumValue: 0.1,
             },
           },
           size: {
