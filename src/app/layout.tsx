@@ -11,7 +11,7 @@ import '@/styles/globals.css'
 // Big Shoulders — fonte display para headings e labels
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
-  axes: ['wght'],          // peso variável 100–900
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-big-shoulders',
   display: 'swap',
 })
