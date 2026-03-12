@@ -50,13 +50,14 @@ export const metadata: Metadata = {
     description:
       'Product Designer especializado em sistemas de design, produtos digitais e aplicação de IA no processo de Design.',
     siteName: 'Toni Foguel',
-    images: [{ url: '/brand/LogoLight.svg', width: 1200, height: 630 }],
+    // imagem gerada por src/app/opengraph-image.tsx
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Toni Foguel — Product Designer & Design Engineer',
     description:
       'Product Designer especializado em sistemas de design, produtos digitais e aplicação de IA no processo de Design',
+    // imagem gerada por src/app/opengraph-image.tsx
   },
   robots: {
     index: true,
