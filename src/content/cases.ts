@@ -226,7 +226,7 @@ export const CASES: CaseData[] = [
         'A solução consistiu na estruturação de um hub central de acesso, capaz de controlar permissões por plano, estado e ano, organizar as diferentes frentes do produto de forma clara e reduzir a complexidade percebida pelo usuário final.',
         'O foco não foi apenas visual, mas estrutural e estratégico, garantindo consistência mesmo com regras complexas por trás.',
       ],
-      images: ['/works/Telas-2.avif'],
+      images: ['/works/Telas-2.png'],
     },
     deliverables: {
       title: 'Principais entregas',
