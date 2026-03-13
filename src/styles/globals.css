@@ -4,28 +4,28 @@
   --font-display: var(--font-big-shoulders), 'Big Shoulders Display', sans-serif;
   /* SF Pro no macOS/iOS → system-ui → Segoe UI no Windows → Roboto no Android */
   --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue',
-               system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+    system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
 
   /* ─── Escala tipográfica — mobile 320px ─── */
-  --font-size-xs:   0.625rem;
-  --font-size-sm:   0.75rem;
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
   --font-size-base: 0.875rem;
-  --font-size-md:   1rem;
-  --font-size-lg:   1.125rem;
-  --font-size-xl:   1.25rem;
-  --font-size-2xl:  1.5rem;
-  --font-size-3xl:  1.75rem;
-  --font-size-4xl:  2rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.75rem;
+  --font-size-4xl: 2rem;
 
-  --line-height-tight:   1.2;
-  --line-height-snug:    1.35;
-  --line-height-base:    1.5;
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-base: 1.5;
   --line-height-relaxed: 1.75;
 
-  --font-weight-regular:  400;
-  --font-weight-medium:   500;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
-  --font-weight-bold:     700;
+  --font-weight-bold: 700;
 
   --icon-size-sm: 16px;
   --icon-size-md: 20px;
@@ -46,46 +46,46 @@
   --color-secondary-900: #7A7268;
 
   --color-neutral-white: #FFFFFF;
-  --color-neutral-100:   #E8E8E8;
-  --color-neutral-400:   #989898;
-  --color-neutral-600:   #585858;
-  --color-neutral-800:   #1E1E1E;
-  --color-neutral-900:   #0A0A0A;
+  --color-neutral-100: #E8E8E8;
+  --color-neutral-400: #989898;
+  --color-neutral-600: #585858;
+  --color-neutral-800: #1E1E1E;
+  --color-neutral-900: #0A0A0A;
 
   /* ─── Tokens semânticos de seção ─── */
-  --color-section-red:   #FB0400;
-  --color-section-dark:  #0A0A0A;
+  --color-section-red: #FB0400;
+  --color-section-dark: #0A0A0A;
   --color-section-light: #F9F7F4;
 
   /* ─── Tokens semânticos gerais ─── */
-  --color-bg:       #0A0A0A;
-  --color-surface:  #1E1E1E;
-  --color-primary:  #FB0400;
-  --color-secondary:#E0D8CE;
-  --color-accent:   #E0D8CE;
+  --color-bg: #0A0A0A;
+  --color-surface: #1E1E1E;
+  --color-primary: #FB0400;
+  --color-secondary: #E0D8CE;
+  --color-accent: #E0D8CE;
 
-  --color-text-on-dark:  #F9F7F4;
+  --color-text-on-dark: #F9F7F4;
   --color-text-on-light: #0A0A0A;
-  --color-text-on-red:   #FFFFFF;
+  --color-text-on-red: #FFFFFF;
   --color-muted-on-dark: #989898;
-  --color-muted-on-light:#585858;
+  --color-muted-on-light: #585858;
 
   /* ─── Espaçamento ─── */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-6:  24px;
-  --space-8:  32px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
   --space-12: 48px;
   --space-16: 64px;
   --space-24: 96px;
   --space-32: 128px;
 
   /* ─── Border radius — editorial, não arredondado demais ─── */
-  --radius-sm:   2px;
-  --radius-md:   6px;
-  --radius-lg:   12px;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
   --radius-full: 9999px;
 
   /* ─── Sombras — flat/minimalistas ─── */
@@ -99,66 +99,69 @@
   --transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
 
   /* ─── Motion reveal ─── */
-  --motion-easing:   cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-easing: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-duration: 500ms;
-  --motion-cascade:  80ms;
+  --motion-cascade: 80ms;
 
   /* ─── Z-index ─── */
-  --z-base:    0;
-  --z-raised:  10;
+  --z-base: 0;
+  --z-raised: 10;
   --z-overlay: 100;
-  --z-modal:   200;
-  --z-toast:   300;
+  --z-modal: 200;
+  --z-toast: 300;
 }
 
 /* ─── Tablet ─── */
 @media (min-width: 860px) {
   :root {
-    --font-size-xs:   0.6875rem;
-    --font-size-sm:   0.8125rem;
+    --font-size-xs: 0.6875rem;
+    --font-size-sm: 0.8125rem;
     --font-size-base: 0.9375rem;
-    --font-size-md:   1rem;
-    --font-size-lg:   1.25rem;
-    --font-size-xl:   1.5rem;
-    --font-size-2xl:  1.75rem;
-    --font-size-3xl:  2.25rem;
-    --font-size-4xl:  2.75rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.75rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 2.75rem;
   }
 }
 
 /* ─── Desktop ─── */
 @media (min-width: 1200px) {
   :root {
-    --font-size-xs:   0.75rem;
-    --font-size-sm:   0.875rem;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
-    --font-size-md:   1.125rem;
-    --font-size-lg:   1.375rem;
-    --font-size-xl:   1.75rem;
-    --font-size-2xl:  2rem;
-    --font-size-3xl:  2.75rem;
-    --font-size-4xl:  3.5rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.375rem;
+    --font-size-xl: 1.75rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.75rem;
+    --font-size-4xl: 3.5rem;
   }
 }
 
 /* ─── Wide ─── */
 @media (min-width: 1720px) {
   :root {
-    --font-size-xs:   0.8125rem;
-    --font-size-sm:   0.9375rem;
+    --font-size-xs: 0.8125rem;
+    --font-size-sm: 0.9375rem;
     --font-size-base: 1.0625rem;
-    --font-size-md:   1.25rem;
-    --font-size-lg:   1.5rem;
-    --font-size-xl:   2rem;
-    --font-size-2xl:  2.5rem;
-    --font-size-3xl:  3.25rem;
-    --font-size-4xl:  4.5rem;
+    --font-size-md: 1.25rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-2xl: 2.5rem;
+    --font-size-3xl: 3.25rem;
+    --font-size-4xl: 4.5rem;
   }
 }
 
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
@@ -168,7 +171,9 @@
    CSS Reset + Base
    ───────────────────────────────────────── */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -190,12 +195,19 @@ body {
   overflow-x: hidden;
 }
 
-img, video, svg {
+img,
+video,
+svg {
   display: block;
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-family: var(--font-display);
   font-weight: var(--font-weight-bold);
@@ -219,7 +231,8 @@ button {
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -229,9 +242,11 @@ ul, ol {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-section-dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: var(--radius-full);

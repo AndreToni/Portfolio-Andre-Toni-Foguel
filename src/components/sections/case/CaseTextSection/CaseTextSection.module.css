@@ -94,11 +94,11 @@
 }
 
 .CaseTextSection--dark .CaseTextSection__Item {
-  color: var(--color-secondary-300);
+  color: var(--color-muted-on-dark);
 }
 
 .CaseTextSection--light .CaseTextSection__Item {
-  color: var(--color-text-on-light);
+  color: var(--color-muted-on-light);
 }
 
 .CaseTextSection__ItemDot {
