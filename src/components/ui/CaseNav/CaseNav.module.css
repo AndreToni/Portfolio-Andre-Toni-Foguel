@@ -13,6 +13,12 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: var(--z-overlay);
+    transition: opacity 300ms ease;
+  }
+
+  .CaseNav--hidden {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .CaseNav__List {

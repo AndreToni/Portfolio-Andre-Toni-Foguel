@@ -21,10 +21,36 @@ interface CaseNavProps {
  */
 export const CaseNav: FC<CaseNavProps> = ({ items }) => {
   const [active, setActive] = useState<string>(items[0]?.id ?? '')
+  const [visible, setVisible] = useState(true)
+  const [inExplore, setInExplore] = useState(false)
+
+  /* Oculta quando o footer entra na viewport */
+  useEffect(() => {
+    const footerEl = document.querySelector<HTMLElement>('footer')
+    const check = () => {
+      if (!footerEl) return
+      setVisible(footerEl.getBoundingClientRect().top > window.innerHeight)
+    }
+    check()
+    window.addEventListener('scroll', check, { passive: true })
+    return () => window.removeEventListener('scroll', check)
+  }, [])
+
+  /* Detecta seção "Continuar explorando" (fundo claro → tema light) */
+  useEffect(() => {
+    const exploreEl = document.querySelector('section[aria-label="Continuar explorando"]')
+    if (!exploreEl) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setInExplore(entry.isIntersecting),
+      { rootMargin: '0px', threshold: 0 }
+    )
+    observer.observe(exploreEl)
+    return () => observer.disconnect()
+  }, [])
 
   /* Tema da seção ativa (index par = dark, ímpar = light) */
   const activeIndex = items.findIndex((item) => item.id === active)
-  const theme = activeIndex % 2 === 0 ? 'dark' : 'light'
+  const theme = inExplore ? 'light' : (activeIndex % 2 === 0 ? 'dark' : 'light')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,7 +78,7 @@ export const CaseNav: FC<CaseNavProps> = ({ items }) => {
 
   return (
     <nav
-      className={`${styles.CaseNav} ${styles[`CaseNav--${theme}`]}`}
+      className={`${styles.CaseNav} ${styles[`CaseNav--${theme}`]} ${visible ? '' : styles['CaseNav--hidden']}`}
       aria-label="Navegação interna do case"
     >
       <ul className={styles.CaseNav__List}>
