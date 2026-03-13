@@ -31,20 +31,23 @@ export const CaseHero: FC<CaseHeroProps> = ({ data }) => {
         <div className={styles.CaseHero__Content}>
           <Breadcrumb items={breadcrumbs} theme="on-red" />
 
-          <span className={styles.CaseHero__Category}>{data.category}</span>
+          <div className={styles.CaseHero__HeaderGroup}>
+            <span className={styles.CaseHero__Category}>{data.category}</span>
 
-          <h1 className={styles.CaseHero__Title}>{data.title}</h1>
+            <div className={styles.CaseHero__TitleGroup}>
+              <h1 className={styles.CaseHero__Title}>{data.title}</h1>
 
-          <p className={styles.CaseHero__Subtitle}>{data.subtitle}</p>
+              <p className={styles.CaseHero__Subtitle}>{data.subtitle}</p>
 
-          {/* KPI Goal Card */}
-          <div className={styles.CaseHero__KpiCard}>
-            <span className={styles.CaseHero__KpiLabel}>Resultado</span>
-            <p className={styles.CaseHero__KpiText}>{data.kpi}</p>
-          </div>
+              {/* KPI Goal Card */}
+              <div className={styles.CaseHero__KpiCard}>
+                <span className={styles.CaseHero__KpiLabel}>Resultado</span>
+                <p className={styles.CaseHero__KpiText}>{data.kpi}</p>
+              </div>
+            </div>
 
-          {/* Grid de meta */}
-          <dl className={styles.CaseHero__Meta}>
+            {/* Grid de meta */}
+            <dl className={styles.CaseHero__Meta}>
             <div className={styles.CaseHero__MetaItem}>
               <dt className={styles.CaseHero__MetaLabel}>Empresa</dt>
               <dd className={styles.CaseHero__MetaValue}>{data.company}</dd>
@@ -76,6 +79,7 @@ export const CaseHero: FC<CaseHeroProps> = ({ data }) => {
               </div>
             )}
           </dl>
+          </div>
 
         </div>
       </div>

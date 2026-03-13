@@ -26,9 +26,10 @@
 .CaseHero__Content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-6);
+  gap: var(--space-12);
   width: 100%;
   max-width: 960px;
+  margin-top: var(--space-8);
 }
 
 .CaseHero__Category {
@@ -38,6 +39,18 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.CaseHero__HeaderGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.CaseHero__TitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .CaseHero__Title {
