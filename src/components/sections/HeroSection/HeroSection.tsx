@@ -25,7 +25,7 @@ export const HeroSection: FC = () => {
 
       <div className={styles.HeroSection__Content}>
         <span className={styles.HeroSection__Label} aria-hidden="true">
-          Design Enginer · Product Design
+          Design Engineer · Product Design
         </span>
 
         <h1 className={styles.HeroSection__Title}>

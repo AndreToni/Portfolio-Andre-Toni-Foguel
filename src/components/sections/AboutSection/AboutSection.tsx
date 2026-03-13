@@ -33,7 +33,7 @@ export const AboutSection: FC = () => {
           <div className={styles.AboutSection__PhotoWrap}>
             <Image
               src="/about-photo.jpg"
-              alt="Toni Fogue"
+              alt="Toni Foguel"
               fill
               sizes="(max-width: 860px) 100vw, 40vw"
               className={styles.AboutSection__Photo}
@@ -42,9 +42,9 @@ export const AboutSection: FC = () => {
           </div>
 
           <div className={styles.AboutSection__PhotoMeta}>
-            <span className={styles.AboutSection__Name}>Toni Fogue</span>
+            <span className={styles.AboutSection__Name}>André Toni Foguel</span>
             <span className={styles.AboutSection__Role}>
-              Product Designer
+              Design Engineer · Product Design
             </span>
           </div>
         </div>
