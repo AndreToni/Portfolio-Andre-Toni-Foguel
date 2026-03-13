@@ -54,7 +54,7 @@ export const Navigation: FC<NavigationProps> = ({ theme = 'red' }) => {
       <div className={styles.Navigation__DesktopCTA}>
         <CTAButton
           label="Entrar em contato"
-          href="https://wa.me/5515998365749?text=Ol%C3%A1%2C%20boa%20tarde!%0ATudo%20tranquilo%3F%0ATenho%20uma%20vaga%20e%20gostaria%20de%20falar%20sobre%20a%20mesma%20com%20o%20senhor."
+          href="https://wa.me/5515998365749?text=Ol%C3%A1%2C%20Andr%C3%A9!%20Espero%20que%20esteja%20bem.%20%0AEstou%20conduzindo%20uma%20oportunidade%20que%20pode%20se%20alinhar%20ao%20seu%20perfil%20e%20gostaria%20de%20trocar%20algumas%20ideias%20com%20voc%C3%AA."
           theme={theme === 'light' ? 'on-light' : theme === 'red' ? 'on-red' : 'on-dark'}
           external
           data-analytics="nav_cta_click"
@@ -106,7 +106,7 @@ export const Navigation: FC<NavigationProps> = ({ theme = 'red' }) => {
           <div className={styles.Navigation__SheetCTA}>
             <CTAButton
               label="Entrar em contato"
-              href="https://wa.me/5515998365749?text=Ol%C3%A1%2C%20boa%20tarde!%0ATudo%20tranquilo%3F%0ATenho%20uma%20vaga%20e%20gostaria%20de%20falar%20sobre%20a%20mesma%20com%20o%20senhor."
+              href="https://wa.me/5515998365749?text=Ol%C3%A1%2C%20Andr%C3%A9!%20Espero%20que%20esteja%20bem.%20%0AEstou%20conduzindo%20uma%20oportunidade%20que%20pode%20se%20alinhar%20ao%20seu%20perfil%20e%20gostaria%20de%20trocar%20algumas%20ideias%20com%20voc%C3%AA."
               theme="on-dark"
               fullWidth
               external
