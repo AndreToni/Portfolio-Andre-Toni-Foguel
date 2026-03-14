@@ -28,13 +28,15 @@ export const HeroSection: FC = () => {
           Design Engineer · Product Design
         </span>
 
-        <h1 className={styles.HeroSection__Title}>
-          Product Designer orientado a negócio
-        </h1>
+        <div className={styles.HeroSection__TitleGroup}>
+          <h1 className={styles.HeroSection__Title}>
+            Product Designer orientado a negócio
+          </h1>
 
-        <p className={styles.HeroSection__Subtitle}>
-          Atuo em produto B2B, SaaS, marketplaces, fintechs e plataformas digitais. Com experiência em discovery, UX research, design systems e liderança de iniciativas.
-        </p>
+          <p className={styles.HeroSection__Subtitle}>
+            Atuo em produto B2B, SaaS, marketplaces, fintechs e plataformas digitais. Com experiência em discovery, UX research, design systems e liderança de iniciativas.
+          </p>
+        </div>
 
         <div className={styles.HeroSection__Actions}>
           <GhostButton
