@@ -5,7 +5,11 @@ import { GhostButton } from '@/components/ui/GhostButton/GhostButton'
 import { SectionReveal } from '@/components/ui/SectionReveal/SectionReveal'
 import styles from './BannerSection.module.css'
 
-export const BannerSection: FC = () => {
+interface BannerSectionProps {
+  hideLabel?: boolean
+}
+
+export const BannerSection: FC<BannerSectionProps> = ({ hideLabel = false }) => {
   return (
     <section
       className={styles.BannerSection}
@@ -14,9 +18,11 @@ export const BannerSection: FC = () => {
       id="contato"
     >
       <SectionReveal className={styles.BannerSection__Inner}>
-        <span className={styles.BannerSection__Label} aria-hidden="true">
-          06 — ENTRAR EM CONTATO
-        </span>
+        {!hideLabel && (
+          <span className={styles.BannerSection__Label} aria-hidden="true">
+            06 — ENTRAR EM CONTATO
+          </span>
+        )}
 
         <h2 className={styles.BannerSection__Title}>
           Vamos evoluir seu

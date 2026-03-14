@@ -7,6 +7,7 @@ import { CaseNumbers } from '@/components/sections/case/CaseNumbers/CaseNumbers'
 import { CaseExplore } from '@/components/sections/case/CaseExplore/CaseExplore'
 import { CaseSectionImage } from '@/components/sections/case/CaseSectionImage/CaseSectionImage'
 import { CaseNav } from '@/components/ui/CaseNav/CaseNav'
+import { BannerSection } from '@/components/sections/BannerSection/BannerSection'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -83,6 +84,9 @@ export default async function CasePage({ params }: PageProps) {
 
       {/* ④ Continuar explorando — herda imagens de works.ts */}
       <CaseExplore currentSlug={slug} />
+
+      {/* ⑤ Banner de contato */}
+      <BannerSection hideLabel />
     </>
   )
 }
