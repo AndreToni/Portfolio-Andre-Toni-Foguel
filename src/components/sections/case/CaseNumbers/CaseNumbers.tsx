@@ -13,6 +13,7 @@ interface CaseNumbersProps {
  */
 export const CaseNumbers: FC<CaseNumbersProps> = ({ numbers, company }) => (
   <section
+    id="numeros-do-projeto"
     className={styles.CaseNumbers}
     aria-label={`Números do projeto ${company}`}
   >
