@@ -61,7 +61,7 @@
 
 .CaseTextSection__Paragraph {
   font-family: var(--font-body);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   line-height: var(--line-height-relaxed);
   margin: 0;
 }
@@ -89,7 +89,7 @@
   align-items: baseline;
   gap: var(--space-3);
   font-family: var(--font-body);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   line-height: var(--line-height-base);
 }
 
