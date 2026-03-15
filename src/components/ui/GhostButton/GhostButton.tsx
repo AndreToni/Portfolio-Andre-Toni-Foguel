@@ -52,6 +52,19 @@ export const GhostButton: FC<GhostButtonProps> = ({
   )
 
   if (href) {
+    /* âncoras (#) usam <a> nativo — Link do Next.js pode interferir no scroll */
+    if (href.startsWith('#')) {
+      return (
+        <a
+          href={href}
+          className={className}
+          data-analytics={dataAnalytics}
+        >
+          {content}
+        </a>
+      )
+    }
+
     return (
       <Link
         href={href}
