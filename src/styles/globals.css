@@ -7,15 +7,15 @@
     system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
 
   /* ─── Escala tipográfica — mobile 320px ─── */
-  --font-size-xs: 0.625rem;
-  --font-size-sm: 0.75rem;
-  --font-size-base: 0.875rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.75rem;
-  --font-size-4xl: 2rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.25rem;
 
   --line-height-tight: 1.2;
   --line-height-snug: 1.35;
@@ -114,10 +114,10 @@
 /* ─── Tablet ─── */
 @media (min-width: 860px) {
   :root {
-    --font-size-xs: 0.6875rem;
-    --font-size-sm: 0.8125rem;
-    --font-size-base: 0.9375rem;
-    --font-size-md: 1rem;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 1.75rem;

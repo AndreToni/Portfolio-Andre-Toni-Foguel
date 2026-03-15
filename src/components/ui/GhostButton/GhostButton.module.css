@@ -37,8 +37,8 @@
 
 /* On red background → fill branco no hover, texto → escuro */
 .GhostButton--on-red {
-  border: 1.5px solid var(--color-secondary);
-  color: var(--color-secondary);
+  border: 1.5px solid var(--color-neutral-white);
+  color: var(--color-neutral-white);
   background-image: linear-gradient(to right, var(--color-neutral-white) 50%, transparent 50%);
 }
 
@@ -49,7 +49,7 @@
 
 /* On dark background → fill branco no hover, texto → escuro */
 .GhostButton--on-dark {
-  border: 1.5px solid var(--color-secondary-700);
+  border: 1.5px solid var(--color-neutral-white);
   color: var(--color-text-on-dark);
   background-image: linear-gradient(to right, var(--color-neutral-white) 50%, transparent 50%);
 }

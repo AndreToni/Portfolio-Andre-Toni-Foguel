@@ -52,7 +52,7 @@ export const AboutSection: FC = () => {
         {/* Coluna direita — Manifesto */}
         <SectionReveal className={styles.AboutSection__Content}>
           <span className={styles.AboutSection__Label} aria-hidden="true">
-            05 — QUEM SOU EU
+            QUEM SOU EU
           </span>
 
           <h2 className={styles.AboutSection__Title}>

@@ -16,7 +16,7 @@ export const ProcessSection: FC = () => {
 
         <SectionReveal className={styles.ProcessSection__Header}>
           <span className={styles.ProcessSection__Label} aria-hidden="true">
-            04 — COMO TRABALHO
+            COMO TRABALHO
           </span>
           <h2 className={styles.ProcessSection__Title}>Processo claro, resultado previsível</h2>
         </SectionReveal>

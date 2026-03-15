@@ -20,7 +20,7 @@ export const BannerSection: FC<BannerSectionProps> = ({ hideLabel = false }) => 
       <SectionReveal className={styles.BannerSection__Inner}>
         {!hideLabel && (
           <span className={styles.BannerSection__Label} aria-hidden="true">
-            06 — ENTRAR EM CONTATO
+            ENTRAR EM CONTATO
           </span>
         )}
 

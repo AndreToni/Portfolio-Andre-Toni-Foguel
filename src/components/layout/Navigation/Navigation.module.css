@@ -3,7 +3,7 @@
 .Navigation {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-6);
 }
 
 /* Desktop list — hidden on mobile */
@@ -48,7 +48,8 @@
 
 /* Second copy gets 50% opacity — contrast between idle and hover */
 .Navigation__LinkText:last-child {
-  opacity: 0.55;
+  color: var(--color-text-on-light);
+
 }
 
 .Navigation__Link:hover .Navigation__LinkSlider {
@@ -56,7 +57,7 @@
 }
 
 .Navigation__Link--red {
-  color: var(--color-secondary);
+  color: var(--color-neutral-white);
 }
 
 .Navigation__Link--dark {
@@ -86,7 +87,7 @@
 }
 
 .Navigation__MobileToggle--red {
-  color: var(--color-secondary);
+  color: var(--color-neutral-white);
 }
 
 .Navigation__MobileToggle--dark {

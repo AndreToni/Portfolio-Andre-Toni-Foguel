@@ -16,7 +16,7 @@ export const AreasSection: FC = () => {
 
         <SectionReveal className={styles.AreasSection__Header}>
           <span className={styles.AreasSection__Label} aria-hidden="true">
-            03 — AREAS
+            AREAS
           </span>
           <h2 className={styles.AreasSection__Title}>Onde já atuei</h2>
         </SectionReveal>

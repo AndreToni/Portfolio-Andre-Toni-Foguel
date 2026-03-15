@@ -16,7 +16,7 @@ export const PortfolioSection: FC = () => {
 
         <SectionReveal className={styles.PortfolioSection__Header}>
           <span className={styles.PortfolioSection__Label} aria-hidden="true">
-            02 — CASES SELECIONADOS
+            CASES SELECIONADOS
           </span>
           <h2 className={styles.PortfolioSection__Title}>
             Trabalhos que geram impacto

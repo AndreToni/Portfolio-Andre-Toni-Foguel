@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-2);
+    gap: var(--space-1);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -36,16 +36,20 @@
     justify-content: flex-start;
   }
 
-  /* Link: barra à esq., label expande para a direita */
+  /* Link: traço horizontal à esq., label expande para a direita */
   .CaseNav__Link {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: var(--space-2);
     text-decoration: none;
-    padding: var(--space-1) 0;
+    padding: var(--space-1) var(--space-2);
+    border-radius: 4px;
     opacity: 0.45;
-    transition: opacity var(--transition-base);
+    transition:
+      opacity var(--transition-base),
+      background-color var(--transition-base),
+      padding var(--transition-base);
   }
 
   .CaseNav__Link:hover,
@@ -53,25 +57,27 @@
     opacity: 1;
   }
 
-  /* Barra vertical — mais alta que larga, largura fixa, altura = copy */
+  .CaseNav__Link:hover {
+    padding: var(--space-2);
+  }
+
+  /* Traço horizontal — fino e curto, cresce no hover/active */
   .CaseNav__Dot {
     display: inline-block;
     flex-shrink: 0;
-    width: 2px;
-    height: 1em;             /* mesma altura do texto */
+    width: 12px;
+    height: 2px;
     border-radius: 1px;
     background: currentColor;
-    transition:
-      transform var(--transition-base),
-      height var(--transition-base);
+    transition: width var(--transition-base);
   }
 
   .CaseNav__Link:hover .CaseNav__Dot,
   .CaseNav__Link--active .CaseNav__Dot {
-    height: 1.6em;           /* cresce no hover/active */
+    width: 20px;
   }
 
-  /* Label — oculta por padrão, expande no hover/active */
+  /* Label — oculta por padrão, expande no hover */
   .CaseNav__Label {
     font-family: var(--font-body);
     font-size: var(--font-size-xs);
@@ -82,7 +88,6 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 0;
-    padding: 0;
     transition:
       max-width var(--transition-base),
       padding var(--transition-base);
@@ -91,31 +96,31 @@
   /* Label só aparece no hover */
   .CaseNav__Link:hover .CaseNav__Label {
     max-width: 200px;
-    padding: var(--space-1) var(--space-2);
+    padding: 0 var(--space-1);
   }
 
   /* ────────────────────────────────────────────
      Tema DARK (seção com fundo escuro)
-     → barra e cápsula brancos; texto escuro
+     → traço e texto brancos; hover com cápsula branca
   ──────────────────────────────────────────── */
   .CaseNav--dark {
     color: var(--color-neutral-white);
   }
 
-  .CaseNav--dark .CaseNav__Link:hover .CaseNav__Label {
+  .CaseNav--dark .CaseNav__Link:hover {
     background: var(--color-neutral-white);
     color: var(--color-text-on-light);
   }
 
   /* ────────────────────────────────────────────
      Tema LIGHT (seção com fundo claro)
-     → barra e cápsula escuros; texto branco
+     → traço e texto escuros; hover com cápsula escura
   ──────────────────────────────────────────── */
   .CaseNav--light {
     color: var(--color-neutral-900);
   }
 
-  .CaseNav--light .CaseNav__Link:hover .CaseNav__Label {
+  .CaseNav--light .CaseNav__Link:hover {
     background: var(--color-neutral-900);
     color: var(--color-neutral-white);
   }

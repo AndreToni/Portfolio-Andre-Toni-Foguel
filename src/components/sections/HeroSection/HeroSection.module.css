@@ -35,7 +35,7 @@
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-secondary);
+  color: var(--color-neutral-white);
   opacity: 0;
   animation: HeroRevealUp 500ms var(--motion-easing) 300ms forwards;
 }
@@ -54,16 +54,16 @@
 }
 
 .HeroSection__TitleAccent {
-  color: var(--color-secondary);
+  color: var(--color-neutral-white);
 }
 
 .HeroSection__Subtitle {
   font-family: var(--font-body);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
-  color: var(--color-secondary-300);
-  max-width: 520px;
+  color: var(--color-neutral-white);
+  max-width: 680px;
   margin: 0;
   opacity: 0;
   animation: HeroRevealUp 500ms var(--motion-easing) 700ms forwards;

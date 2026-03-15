@@ -22,7 +22,7 @@
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-secondary);
+  color: var(--color-text-on-red);
   margin-bottom: var(--space-6);
 }
 
@@ -41,8 +41,8 @@
   font-family: var(--font-body);
   font-size: var(--font-size-md);
   line-height: var(--line-height-relaxed);
-  color: rgba(255, 255, 255, 0.75);
-  max-width: 560px;
+  color: var(--color-text-on-red);
+  max-width: 640px;
   margin: 0 0 var(--space-12);
 }
 
