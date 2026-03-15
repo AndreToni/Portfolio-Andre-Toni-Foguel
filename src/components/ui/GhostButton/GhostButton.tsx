@@ -52,13 +52,18 @@ export const GhostButton: FC<GhostButtonProps> = ({
   )
 
   if (href) {
-    /* âncoras (#) usam <a> nativo — Link do Next.js pode interferir no scroll */
+    /* âncoras (#): scroll suave sem gravar hash na URL */
     if (href.startsWith('#')) {
+      const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
       return (
         <a
           href={href}
           className={className}
           data-analytics={dataAnalytics}
+          onClick={handleAnchorClick}
         >
           {content}
         </a>
