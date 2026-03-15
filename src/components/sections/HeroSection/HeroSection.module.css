@@ -63,7 +63,7 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-relaxed);
   color: var(--color-neutral-white);
-  max-width: 760px;
+  max-width: 820px;
   margin: 0;
   opacity: 0;
   animation: HeroRevealUp 500ms var(--motion-easing) 700ms forwards;
