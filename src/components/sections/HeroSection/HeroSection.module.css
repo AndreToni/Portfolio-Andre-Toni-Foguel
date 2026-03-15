@@ -160,7 +160,7 @@
 
   .HeroSection__Subtitle {
     font-size: var(--font-size-xl);
-    max-width: 720px;
+    max-width: 820px;
   }
 
   .HeroSection__SectionNumber {
@@ -176,6 +176,11 @@
 
   .HeroSection__SectionNumber {
     right: var(--space-16);
+  }
+
+  .HeroSection__Subtitle {
+    max-width: 880px;
+
   }
 }
 
