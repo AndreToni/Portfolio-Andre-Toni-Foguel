@@ -35,7 +35,7 @@
   /* ─── Paleta completa ─── */
   --color-primary-100: #FFF0F0;
   --color-primary-300: #FF6B68;
-  --color-primary-500: #FB0400;
+  --color-primary-500: #E10600;
   --color-primary-700: #C40300;
   --color-primary-900: #7A0100;
 
@@ -53,14 +53,14 @@
   --color-neutral-900: #0A0A0A;
 
   /* ─── Tokens semânticos de seção ─── */
-  --color-section-red: #FB0400;
+  --color-section-red: #E10600;
   --color-section-dark: #0A0A0A;
   --color-section-light: #F9F7F4;
 
   /* ─── Tokens semânticos gerais ─── */
   --color-bg: #0A0A0A;
   --color-surface: #1E1E1E;
-  --color-primary: #FB0400;
+  --color-primary: #E10600;
   --color-secondary: #E0D8CE;
   --color-accent: #E0D8CE;
 
