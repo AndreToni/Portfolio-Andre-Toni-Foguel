@@ -1,10 +1,13 @@
+'use client'
+
 /**
  * Requires: /public/brand/LogoLight.svg
  */
 
-import { type FC } from 'react'
+import { type FC, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import styles from './Footer.module.css'
 
 const FOOTER_LINKS = [
@@ -16,6 +19,18 @@ const FOOTER_LINKS = [
 
 export const Footer: FC = () => {
   const currentYear = new Date().getFullYear()
+  const pathname = usePathname()
+  const router = useRouter()
+
+  /* Scroll sem alterar URL — funciona na home e cross-page via sessionStorage */
+  const handleSectionClick = useCallback((sectionId: string) => {
+    if (pathname === '/') {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      sessionStorage.setItem('scrollTo', sectionId)
+      router.push('/')
+    }
+  }, [pathname, router])
 
   return (
     <footer
@@ -42,13 +57,20 @@ export const Footer: FC = () => {
 
           <nav aria-label="Links do rodapé">
             <ul className={styles.Footer__Nav} role="list">
-              {FOOTER_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className={styles.Footer__NavLink}>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {FOOTER_LINKS.map((link) => {
+                const sectionId = link.href.replace('/#', '')
+                return (
+                  <li key={link.href}>
+                    <button
+                      type="button"
+                      className={styles.Footer__NavLink}
+                      onClick={() => handleSectionClick(sectionId)}
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
 

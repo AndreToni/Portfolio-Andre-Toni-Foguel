@@ -4,7 +4,7 @@
  * Icons require: npm install lucide-react
  */
 
-import { type FC } from 'react'
+import { type FC, useEffect } from 'react'
 import { ExternalLink } from 'lucide-react'
 import { CTAButton } from '@/components/ui/CTAButton/CTAButton'
 import { GhostButton } from '@/components/ui/GhostButton/GhostButton'
@@ -13,6 +13,16 @@ import { HeroScroll } from '@/components/ui/HeroScroll/HeroScroll'
 import styles from './HeroSection.module.css'
 
 export const HeroSection: FC = () => {
+  /* Scroll cross-page: consome o alvo gravado em sessionStorage pela Navigation/Footer */
+  useEffect(() => {
+    const target = sessionStorage.getItem('scrollTo')
+    if (!target) return
+    sessionStorage.removeItem('scrollTo')
+    setTimeout(() => {
+      document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 300)
+  }, [])
+
   return (
     <section
       className={styles.HeroSection}

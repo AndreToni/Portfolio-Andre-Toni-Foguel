@@ -52,21 +52,19 @@ export const GhostButton: FC<GhostButtonProps> = ({
   )
 
   if (href) {
-    /* âncoras (#): scroll suave sem gravar hash na URL */
+    /* âncoras (#): scroll suave via button — não grava hash na URL */
     if (href.startsWith('#')) {
-      const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault()
-        document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
       return (
-        <a
-          href={href}
+        <button
+          type="button"
           className={className}
           data-analytics={dataAnalytics}
-          onClick={handleAnchorClick}
+          onClick={() =>
+            document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }
         >
           {content}
-        </a>
+        </button>
       )
     }
 

@@ -5,8 +5,9 @@
  * Icons require: npm install lucide-react
  */
 
-import { type FC, useState } from 'react'
+import { type FC, useState, useCallback } from 'react'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { CTAButton } from '@/components/ui/CTAButton/CTAButton'
@@ -25,29 +26,46 @@ interface NavigationProps {
 
 export const Navigation: FC<NavigationProps> = ({ theme = 'red' }) => {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
+
+  /* Scroll sem alterar URL — funciona na home e cross-page via sessionStorage */
+  const handleSectionClick = useCallback((sectionId: string, closeSheet?: () => void) => {
+    closeSheet?.()
+    if (pathname === '/') {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      sessionStorage.setItem('scrollTo', sectionId)
+      router.push('/')
+    }
+  }, [pathname, router])
 
   return (
     <nav className={styles.Navigation} aria-label="Navegação principal">
 
       {/* Desktop links */}
       <ul className={styles.Navigation__List} role="list">
-        {NAV_LINKS.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              aria-label={link.label}
-              className={[
-                styles.Navigation__Link,
-                styles[`Navigation__Link--${theme}`],
-              ].join(' ')}
-            >
-              <span className={styles.Navigation__LinkSlider} aria-hidden="true">
-                <span className={styles.Navigation__LinkText}>{link.label}</span>
-                <span className={styles.Navigation__LinkText}>{link.label}</span>
-              </span>
-            </Link>
-          </li>
-        ))}
+        {NAV_LINKS.map((link) => {
+          const sectionId = link.href.replace('/#', '')
+          return (
+            <li key={link.href}>
+              <button
+                type="button"
+                aria-label={link.label}
+                className={[
+                  styles.Navigation__Link,
+                  styles[`Navigation__Link--${theme}`],
+                ].join(' ')}
+                onClick={() => handleSectionClick(sectionId)}
+              >
+                <span className={styles.Navigation__LinkSlider} aria-hidden="true">
+                  <span className={styles.Navigation__LinkText}>{link.label}</span>
+                  <span className={styles.Navigation__LinkText}>{link.label}</span>
+                </span>
+              </button>
+            </li>
+          )
+        })}
       </ul>
 
       {/* Desktop CTA */}
@@ -90,17 +108,20 @@ export const Navigation: FC<NavigationProps> = ({ theme = 'red' }) => {
           </button>
 
           <ul className={styles.Navigation__SheetList} role="list">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={styles.Navigation__SheetLink}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const sectionId = link.href.replace('/#', '')
+              return (
+                <li key={link.href}>
+                  <button
+                    type="button"
+                    className={styles.Navigation__SheetLink}
+                    onClick={() => handleSectionClick(sectionId, () => setOpen(false))}
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              )
+            })}
           </ul>
 
           <div className={styles.Navigation__SheetCTA}>
