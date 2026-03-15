@@ -16,7 +16,7 @@ const bigShoulders = Big_Shoulders({
   display: 'swap',
 })
 
-// Body font → SF Pro via system-ui stack (zero network request no macOS/iOS)
+// Body font → Big Shoulders (mesmo carregamento, variante texto)
 
 /* ─── Metadata ─── */
 export const metadata: Metadata = {
