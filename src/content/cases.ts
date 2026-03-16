@@ -54,7 +54,7 @@ const NAV_SECTIONS = [
   { id: 'impacto', label: 'Impacto' },
   { id: 'aprendizados', label: 'Aprendizados' },
   { id: 'numeros-do-projeto', label: 'Números do projeto' },
-  { id: 'outros-projetos', label: 'Outros projetos' },
+  { id: 'outros-projetos', label: 'Outros trabalhos' },
 ]
 
 export const CASES: CaseData[] = [

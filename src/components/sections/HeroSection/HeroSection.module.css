@@ -108,8 +108,14 @@
 
 /* Mobile — todos os elementos full width abaixo de 860px */
 @media (max-width: 859px) {
+  .HeroSection__Title {
+    margin-top: var(--space-2);
+  }
+
   .HeroSection__Subtitle {
     max-width: 100%;
+    margin-top: var(--space-2);
+
   }
 
   .HeroSection__Actions {

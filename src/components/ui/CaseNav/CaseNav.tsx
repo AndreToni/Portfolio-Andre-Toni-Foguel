@@ -15,7 +15,7 @@ interface CaseNavProps {
 
 /**
  * CaseNav — menu lateral de navegação interno do case.
- * - Fixo à direita, alinhado à direita (dot à dir., label expande à esq.)
+ * - Fixo à esquerda, alinhado à esquerda (dot à dir., label expande à esq.)
  * - Tema auto: seções pares → dark bg → nav branco; ímpares → light bg → nav preto
  * - Label hover encapsulada com a cor de contraste da seção
  */
@@ -86,9 +86,8 @@ export const CaseNav: FC<CaseNavProps> = ({ items }) => {
           <li key={id} className={styles.CaseNav__Item}>
             <a
               href={`#${id}`}
-              className={`${styles.CaseNav__Link} ${
-                active === id ? styles['CaseNav__Link--active'] : ''
-              }`}
+              className={`${styles.CaseNav__Link} ${active === id ? styles['CaseNav__Link--active'] : ''
+                }`}
               onClick={(e) => handleClick(e, id)}
             >
               <span className={styles.CaseNav__Label}>{label}</span>

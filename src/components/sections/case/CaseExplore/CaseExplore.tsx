@@ -19,7 +19,7 @@ export const CaseExplore: FC<CaseExploreProps> = ({ currentSlug }) => {
       <div className={styles.CaseExplore__Inner}>
         <header className={styles.CaseExplore__Header}>
           <span className={styles.CaseExplore__Label}>Continue explorando</span>
-          <h2 className={styles.CaseExplore__Title}>Outros projetos</h2>
+          <h2 className={styles.CaseExplore__Title}>Outros trabalhos</h2>
         </header>
 
         <div className={styles.CaseExplore__Grid}>
