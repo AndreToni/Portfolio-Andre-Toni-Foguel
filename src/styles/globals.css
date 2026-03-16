@@ -263,8 +263,34 @@ ol {
   color: var(--color-neutral-white);
 }
 
-/* ─── VLibras — posicionamento do widget de acessibilidade ─── */
+/* ─── VLibras — posicionamento e isolamento do widget de acessibilidade ─── */
 div[vw] {
+  position: fixed !important;
   bottom: 0 !important;
   right: 0 !important;
+  z-index: 150 !important;
+  /* abaixo de modais (200) e toasts (300) */
+  isolation: isolate;
+}
+
+/* Impede que o wrapper interno bloqueie eventos fora da área do botão */
+div[vw-plugin-wrapper] {
+  pointer-events: none;
+}
+
+div[vw-plugin-wrapper] * {
+  pointer-events: auto;
+}
+
+/* Evita interferência com scroll nativo no mobile */
+div[vw],
+div[vw] * {
+  touch-action: manipulation;
+}
+
+/* No mobile esconde o wrapper enquanto fechado para não bloquear área clicável */
+@media (max-width: 860px) {
+  div[vw]:not(.active) div[vw-plugin-wrapper] {
+    display: none !important;
+  }
 }
