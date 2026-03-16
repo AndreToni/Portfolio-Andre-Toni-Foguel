@@ -32,9 +32,10 @@ export const CaseHero: FC<CaseHeroProps> = ({ data }) => {
           <Breadcrumb items={breadcrumbs} theme="on-red" />
 
           <div className={styles.CaseHero__HeaderGroup}>
-            <span className={styles.CaseHero__Category}>{data.category}</span>
 
             <div className={styles.CaseHero__TitleGroup}>
+              <span className={styles.CaseHero__Category}>{data.category}</span>
+
               <h1 className={styles.CaseHero__Title}>{data.title}</h1>
 
               <p className={styles.CaseHero__Subtitle}>{data.subtitle}</p>
@@ -48,37 +49,37 @@ export const CaseHero: FC<CaseHeroProps> = ({ data }) => {
 
             {/* Grid de meta */}
             <dl className={styles.CaseHero__Meta}>
-            <div className={styles.CaseHero__MetaItem}>
-              <dt className={styles.CaseHero__MetaLabel}>Empresa</dt>
-              <dd className={styles.CaseHero__MetaValue}>{data.company}</dd>
-            </div>
-            {data.segment && (
               <div className={styles.CaseHero__MetaItem}>
-                <dt className={styles.CaseHero__MetaLabel}>Segmento</dt>
-                <dd className={styles.CaseHero__MetaValue}>{data.segment}</dd>
+                <dt className={styles.CaseHero__MetaLabel}>Empresa</dt>
+                <dd className={styles.CaseHero__MetaValue}>{data.company}</dd>
               </div>
-            )}
-            {data.platform && (
+              {data.segment && (
+                <div className={styles.CaseHero__MetaItem}>
+                  <dt className={styles.CaseHero__MetaLabel}>Segmento</dt>
+                  <dd className={styles.CaseHero__MetaValue}>{data.segment}</dd>
+                </div>
+              )}
+              {data.platform && (
+                <div className={styles.CaseHero__MetaItem}>
+                  <dt className={styles.CaseHero__MetaLabel}>Plataforma</dt>
+                  <dd className={styles.CaseHero__MetaValue}>{data.platform}</dd>
+                </div>
+              )}
               <div className={styles.CaseHero__MetaItem}>
-                <dt className={styles.CaseHero__MetaLabel}>Plataforma</dt>
-                <dd className={styles.CaseHero__MetaValue}>{data.platform}</dd>
+                <dt className={styles.CaseHero__MetaLabel}>Ano</dt>
+                <dd className={styles.CaseHero__MetaValue}>{data.year}</dd>
               </div>
-            )}
-            <div className={styles.CaseHero__MetaItem}>
-              <dt className={styles.CaseHero__MetaLabel}>Ano</dt>
-              <dd className={styles.CaseHero__MetaValue}>{data.year}</dd>
-            </div>
-            <div className={styles.CaseHero__MetaItem}>
-              <dt className={styles.CaseHero__MetaLabel}>Papel</dt>
-              <dd className={styles.CaseHero__MetaValue}>{data.role}</dd>
-            </div>
-            {data.duration && (
               <div className={styles.CaseHero__MetaItem}>
-                <dt className={styles.CaseHero__MetaLabel}>Duração</dt>
-                <dd className={styles.CaseHero__MetaValue}>{data.duration}</dd>
+                <dt className={styles.CaseHero__MetaLabel}>Papel</dt>
+                <dd className={styles.CaseHero__MetaValue}>{data.role}</dd>
               </div>
-            )}
-          </dl>
+              {data.duration && (
+                <div className={styles.CaseHero__MetaItem}>
+                  <dt className={styles.CaseHero__MetaLabel}>Duração</dt>
+                  <dd className={styles.CaseHero__MetaValue}>{data.duration}</dd>
+                </div>
+              )}
+            </dl>
           </div>
 
         </div>

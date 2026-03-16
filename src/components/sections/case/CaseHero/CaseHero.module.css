@@ -35,8 +35,8 @@
 .CaseHero__Category {
   font-family: var(--font-body);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.15em;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: --color-neutral-white;
 }

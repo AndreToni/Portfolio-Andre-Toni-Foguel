@@ -34,11 +34,11 @@ export const HeroSection: FC = () => {
       <ParticleCanvas id="hero-particles" />
 
       <div className={styles.HeroSection__Content}>
-        <span className={styles.HeroSection__Label} aria-hidden="true">
-          Design Engineer · Product Design
-        </span>
 
         <div className={styles.HeroSection__TitleGroup}>
+          <span className={styles.HeroSection__Label} aria-hidden="true">
+            Design Engineer · Product Design
+          </span>
           <h1 className={styles.HeroSection__Title}>
             Product Designer orientado a negócio
           </h1>
