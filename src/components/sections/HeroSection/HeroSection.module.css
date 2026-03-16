@@ -108,6 +108,10 @@
 
 /* Mobile — todos os elementos full width abaixo de 860px */
 @media (max-width: 859px) {
+  .HeroSection__Content {
+    gap: var(--space-8);
+  }
+
   .HeroSection__Title {
     margin-top: var(--space-2);
   }

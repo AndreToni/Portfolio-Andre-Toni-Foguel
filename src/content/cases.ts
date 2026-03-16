@@ -87,7 +87,7 @@ export const CASES: CaseData[] = [
       title: 'Problema',
       paragraphs: [
         'Durante uma negociação com a Braskem, surgiu a necessidade de suportar múltiplos SKUs sendo produzidos simultaneamente em uma mesma máquina. O sistema não estava preparado para esse cenário.',
-        'Sem essa capacidade estrutural, o pitch estratégico não poderia acontecer, colocando em risco a entrada em um cliente enterprise. Sem essa funcionalidade estrutural, o pitch para a Braskem não aconteceria.',
+        'Sem essa capacidade estrutural, o pitch estratégico não poderia acontecer, colocando em risco a entrada em um cliente enterprise.',
       ],
     },
     restrictions: {
@@ -97,7 +97,7 @@ export const CASES: CaseData[] = [
       ],
       items: [
         'Tempo: duas sprints de 15 dias para entregar a feature funcional.',
-        'Usuários: operadores de fábrica com baixa familiaridade digital e, em muitos casos, baixa alfabetização.',
+        'Usuários: operadores de fábrica com baixa familiaridade digital e, em muitos casos, baixa alfabetização, e gestores em busca de facilitação na leitura do dados.',
         'Ambiente de teste: testes de usabilidade precisariam acontecer no pátio da fábrica, em ambiente ruidoso, com interrupções constantes e sem possibilidade de gravação.',
         'Cultura organizacional: parte dos operadores enxergava o sistema como uma ferramenta de vigilância, o que gerava resistência ao uso.',
       ],
@@ -325,7 +325,7 @@ export const CASES: CaseData[] = [
     errorsAdjustments: {
       title: 'Erros e ajustes',
       paragraphs: [
-        'As primeiras versões estavam complexas demais e pouco práticas. A documentação dificultava aplicação consistente.',
+        'As primeiras versões estavam complexas demais e pouco práticas. A documentação dificultava aplicação consistentee a escalabilidade.',
         'Simplificamos a estrutura de tokens e reduzimos camadas desnecessárias, tornando o sistema mais utilizável, diminuindo fricção entre times e aumentando sustentabilidade.',
       ],
     },
@@ -405,9 +405,10 @@ export const CASES: CaseData[] = [
     problem: {
       title: 'Problema',
       paragraphs: [
-        'O contrato previa apenas um app de coleta, mas o diagnóstico mostrou a necessidade de um sistema completo de gestão e análise. Os principais problemas identificados eram:',
+        'Os principais problemas identificados eram:',
       ],
       items: [
+        'O contrato previa apenas um app de coleta, mas o diagnóstico mostrou a necessidade de um sistema completo de gestão e análise.',
         'Falta de controle de autoria: formulários permitiam múltiplas respostas com o mesmo e-mail, sem controle real de quem enviava os dados.',
         'Dados inconsistentes: informações divergentes para o mesmo contexto dificultavam validação e comprometiam análises.',
         'Consolidação manual e fragmentada: ausência de estrutura central tornava o processo lento e pouco escalável.',
