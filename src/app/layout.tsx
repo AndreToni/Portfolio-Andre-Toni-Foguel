@@ -16,7 +16,7 @@ const bigShoulders = Big_Shoulders({
   display: 'swap',
 })
 
-// Body font → Big Shoulders (mesmo carregamento, variante texto)
+// Body font → Switzer via Fontshare CDN (ver <link> no RootLayout)
 
 /* ─── Metadata ─── */
 export const metadata: Metadata = {
@@ -83,6 +83,12 @@ export default function RootLayout({
       className={bigShoulders.variable}
       suppressHydrationWarning
     >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700&display=swap"
+        />
+      </head>
       <body>
         <Preloader />
         <Header />

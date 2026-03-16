@@ -2,9 +2,7 @@
 
 :root {
   --font-display: var(--font-big-shoulders), 'Big Shoulders Display', sans-serif;
-  /* SF Pro no macOS/iOS → system-ui → Segoe UI no Windows → Roboto no Android */
-  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue',
-    system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-body: 'Switzer', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
   /* ─── Escala tipográfica — mobile 320px ─── */
   --font-size-xs: 0.75rem;
