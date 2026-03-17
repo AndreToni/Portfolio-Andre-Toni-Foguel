@@ -16,8 +16,6 @@ export const Preloader: FC<PreloaderProps> = ({ onComplete }) => {
     const t2 = setTimeout(() => setPhase('exiting'), 1400)
     const t3 = setTimeout(() => {
       setPhase('done')
-      // Habilita transitions após a animação de entrada — evita lag no 1.º hover
-      document.body.classList.remove('preload')
       onComplete?.()
     }, 2000)
 

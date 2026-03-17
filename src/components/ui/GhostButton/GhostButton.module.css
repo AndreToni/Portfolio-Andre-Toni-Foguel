@@ -19,7 +19,6 @@
   white-space: nowrap;
   background-size: 200% 100%;
   background-position: right center;
-  will-change: background-position, transform;
   transition:
     background-position 200ms ease,
     border-color var(--transition-base),
@@ -33,14 +32,6 @@
 }
 
 .GhostButton:active {
-  transform: translateY(0);
-}
-
-/* Remove o foco visual após clique (mouse), mantém para teclado */
-/* :not(:hover) evita sobrescrever o efeito de hover (especificidade) */
-.GhostButton:focus:not(:focus-visible):not(:hover) {
-  outline: none;
-  background-position: right center;
   transform: translateY(0);
 }
 
