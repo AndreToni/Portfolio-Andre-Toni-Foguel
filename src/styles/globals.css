@@ -165,6 +165,15 @@
   }
 }
 
+/* ─── Bloqueia transitions durante o carregamento (classe removida pelo Preloader) ─── */
+/* Evita que o gradiente dos botões anime no 1.º hover após hidratação do Next.js */
+body.preload *,
+body.preload *::before,
+body.preload *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
 /* ─────────────────────────────────────────
    CSS Reset + Base
    ───────────────────────────────────────── */

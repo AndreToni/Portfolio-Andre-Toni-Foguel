@@ -89,7 +89,7 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700&display=swap"
         />
       </head>
-      <body>
+      <body className="preload">
         <Preloader />
         <Header />
         <main id="main-content" tabIndex={-1}>
