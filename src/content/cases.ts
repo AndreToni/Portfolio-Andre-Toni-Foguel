@@ -449,7 +449,7 @@ export const CASES: CaseData[] = [
         'A solução consistiu na criação de um ecossistema digital composto por um aplicativo de coleta de dados, pensado para contexto de campo e limitações de infraestrutura, e um painel de gestão para usuários internos, permitindo visualização consolidada, organização e análise estratégica das informações.',
         'O foco não foi apenas substituir formulários, mas estruturar um sistema confiável de coleta e gestão institucional de dados.',
       ],
-      images: ['/works/Telas-4.png'],
+      images: ['/works/Telas-4.jpg'],
     },
     deliverables: {
       title: 'Principais entregas',
