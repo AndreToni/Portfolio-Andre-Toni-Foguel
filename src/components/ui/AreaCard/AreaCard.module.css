@@ -92,7 +92,7 @@
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-secondary);
+  color: var(--color-neutral-white);
   text-decoration: none;
   transition:
     gap var(--transition-base),

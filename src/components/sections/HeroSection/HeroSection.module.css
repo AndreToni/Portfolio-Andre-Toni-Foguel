@@ -87,7 +87,7 @@
   font-family: var(--font-display);
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: var(--font-weight-bold);
-  color: rgba(251, 4, 0, 0.35);
+  color: rgba(108, 58, 142, 0.35);
   line-height: 1;
   letter-spacing: -0.02em;
   user-select: none;

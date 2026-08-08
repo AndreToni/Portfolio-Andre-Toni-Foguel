@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react'
 import type { Work } from '@/types'
 import { useCardCursor } from '@/hooks/useCardCursor'
 import { CardCursor } from '@/components/ui/CardCursor/CardCursor'
+import { Tag } from '@/components/ui/Tag/Tag'
 import styles from './WorkCard.module.css'
 
 interface WorkCardProps extends Work {
@@ -56,7 +57,7 @@ export const WorkCard: FC<WorkCardProps> = ({
 
       {/* Meta */}
       <div className={styles.WorkCard__Body}>
-        <span className={styles.WorkCard__Badge}>{category}</span>
+        <Tag label={category} theme="light" />
         <h3 className={styles.WorkCard__Title}>{title}</h3>
         <p className={styles.WorkCard__Description}>{description}</p>
 

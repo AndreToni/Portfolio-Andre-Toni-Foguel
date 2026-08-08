@@ -32,7 +32,7 @@
 
 /* Scrolled states — subtle backdrop per section theme */
 .Header--scrolled.Header--red {
-  background: rgba(251, 4, 0, 0.9);
+  background: rgba(108, 58, 142, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }

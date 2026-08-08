@@ -84,7 +84,7 @@ export const AboutSection: FC = () => {
 
           <div className={styles.AboutSection__Tags} aria-label="Competências">
             {SKILLS.map((skill) => (
-              <Tag key={skill} label={skill} />
+              <Tag key={skill} label={skill} theme="dark" />
             ))}
           </div>
         </SectionReveal>
