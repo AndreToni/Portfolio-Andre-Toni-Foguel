@@ -38,7 +38,7 @@
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: --color-neutral-white;
+  color: var(--color-text-on-red);
 }
 
 .CaseHero__HeaderGroup {
@@ -108,8 +108,8 @@
 /* ── KPI Goal Card ── */
 .CaseHero__KpiCard {
   padding: var(--space-3);
-  background: rgba(255, 255, 255, 0.08);
-  border-left: 3px solid var(--color-text-on-red);
+  background: rgb(16, 17, 18);
+  border-left: 3px solid var(--color-primary-700);
 }
 
 .CaseHero__KpiLabel {
@@ -118,7 +118,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  color: var(--color-text-on-red);
+  color: var(--color-neutral-white);
   margin-bottom: var(--space-2);
 }
 
@@ -127,7 +127,7 @@
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-relaxed);
-  color: var(--color-text-on-red);
+  color: var(--color-neutral-white);
   margin: 0;
 }
 
