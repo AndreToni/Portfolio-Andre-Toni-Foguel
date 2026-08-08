@@ -61,11 +61,16 @@ export const AboutSection: FC = () => {
 
           <div className={styles.AboutSection__Manifesto}>
             <p>
-              Sou Product Designer com mais de 4 anos de experiência em UX/UI e
-              Product Design, atuando em produtos digitais e sistemas complexos.
-              Tenho formação em Ciência da Computação, o que me permite trabalhar
-              com proximidade técnica, entender restrições reais e colaborar de
-              forma eficiente com times de produto e engenharia.
+              Sou Product Designer com mais de 5 anos de experiência em UX/UI e
+              Product Design, atuando na concepção e evolução de produtos
+              digitais e sistemas complexos. Sou formado em Ciência da
+              Computação e atualmente curso um MBA em Inovação Orientada à
+              Inteligência Artificial com Experiência do Usuário, aprofundando
+              minha atuação na interseção entre design, tecnologia,
+              inteligência artificial e inovação. Essa combinação me permite
+              trabalhar com proximidade técnica, compreender restrições reais
+              e colaborar de forma eficiente com times de produto e
+              engenharia.
             </p>
             <p>
               Ao longo da minha trajetória, atuei em contextos B2B, produtos
@@ -77,8 +82,10 @@ export const AboutSection: FC = () => {
             <p>
               Trabalho com foco em clareza, decisão e impacto, utilizando
               pesquisa, prototipação e validação para reduzir riscos e orientar
-              escolhas de produto. Meu interesse é atuar em times que valorizem
-              design como ferramenta estratégica, e não apenas como camada visual.
+              escolhas de produto. Tenho especial interesse em contextos nos
+              quais design, tecnologia e negócio precisam trabalhar de forma
+              integrada, utilizando o design como ferramenta estratégica para
+              resolver problemas reais e não apenas como camada visual.
             </p>
           </div>
 
