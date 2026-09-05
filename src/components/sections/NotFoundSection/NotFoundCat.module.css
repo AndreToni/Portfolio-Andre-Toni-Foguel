@@ -1,0 +1,12 @@
+.NotFoundCat {
+  width: 200px;
+  height: 143px;
+}
+
+/* Tablet */
+@media (min-width: 860px) {
+  .NotFoundCat {
+    width: 260px;
+    height: 186px;
+  }
+}
