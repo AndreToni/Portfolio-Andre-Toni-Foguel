@@ -1,14 +1,18 @@
 'use client'
 
 import Script from 'next/script'
+import type { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './NotFoundCat.module.css'
 
-// Estende o JSX para reconhecer o web component <lottie-player>
-declare global {
+// Estende o JSX para reconhecer o web component <lottie-player>.
+// Com "jsx: react-jsx" (React 19), a augmentação precisa ser feita no
+// módulo 'react' — o antigo `declare global { namespace JSX {...} } }`
+// não é mais o namespace que o TypeScript usa para checar JSX.
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'lottie-player': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & {
+      'lottie-player': DetailedHTMLProps<
+        HTMLAttributes<HTMLElement> & {
           src: string
           background?: string
           speed?: string
