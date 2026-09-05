@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header/Header'
 import { Footer } from '@/components/layout/Footer/Footer'
 import { VLibras } from '@/components/ui/VLibras/VLibras'
 import { CookieConsent } from '@/components/ui/CookieConsent/CookieConsent'
+import { ChromeVisibilityProvider } from '@/contexts/ChromeVisibilityContext'
 import '@/styles/globals.css'
 
 /* ─── Google Fonts via next/font (zero layout shift) ─── */
@@ -90,14 +91,16 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Preloader />
-        <Header />
-        <main id="main-content" tabIndex={-1}>
-          {children}
-        </main>
-        <Footer />
-        <VLibras />
-        <CookieConsent />
+        <ChromeVisibilityProvider>
+          <Preloader />
+          <Header />
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+          <VLibras />
+          <CookieConsent />
+        </ChromeVisibilityProvider>
       </body>
     </html>
   )

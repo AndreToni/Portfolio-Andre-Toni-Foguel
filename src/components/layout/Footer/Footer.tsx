@@ -8,6 +8,7 @@ import { type FC, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import { useChromeVisibility } from '@/contexts/ChromeVisibilityContext'
 import styles from './Footer.module.css'
 
 const FOOTER_LINKS = [
@@ -21,6 +22,7 @@ export const Footer: FC = () => {
   const currentYear = new Date().getFullYear()
   const pathname = usePathname()
   const router = useRouter()
+  const { hideFooter } = useChromeVisibility()
 
   /* Scroll sem alterar URL — funciona na home e cross-page via sessionStorage */
   const handleSectionClick = useCallback((sectionId: string) => {
@@ -31,6 +33,8 @@ export const Footer: FC = () => {
       router.push('/')
     }
   }, [pathname, router])
+
+  if (hideFooter) return null
 
   return (
     <footer
